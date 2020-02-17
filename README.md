@@ -66,28 +66,28 @@ public AVLTreeNode smallest(AVLTreeNode node)
 `````````````
 ---
 
-**Description:** *Put method for a binary search tree (will be used by another method for properly inserting data into an AVL Tree). Given the root of a binary search tree node and a key-value pair key and data, return the node storing the the new node containing record (key, data); this method must throw the TreeException if a record with a duplicate key is attempted to be inserted into the tree. * 
+**Description:** *Put method for a binary search tree (will be used by another method for properly inserting data into an AVL Tree). Given the root of a binary search tree node and a key-value pair key and data, return the node storing the the new node containing record (key, data); this method must throw the TreeException if a record with a duplicate key is attempted to be inserted into the tree.* 
 
 `````````````
 public AVLTreeNode put(AVLTreeNode node, int key, int data) throws TreeException
 `````````````
 ---
 
-**Description:** *Remove method for a binary search tree. Given the root of a binary search tree node and a key, remove the record with key from the tree. The method must return the node where the removed node used to be. If there is no node storing a record with key, throw the TreeException. * 
+**Description:** *Remove method for a binary search tree. Given the root of a binary search tree node and a key, remove the record with key from the tree. The method must return the node where the removed node used to be. If there is no node storing a record with key, throw the TreeException.* 
 
 `````````````
 public AVLTreeNode remove(AVLTreeNode node, int key) throws TreeException
 `````````````
 ---
 
-**Description:** *Return an ArrayList(using Java’s ArrayList class) with AVLTreeNode objects from an inorder traversal. Use the next method to perform the inorder traversal; the nodes in the list have keys of value from smallest to largest (not the data in the nodes). * 
+**Description:** *Return an ArrayList(using Java’s ArrayList class) with AVLTreeNode objects from an inorder traversal. Use the next method to perform the inorder traversal; the nodes in the list have keys of value from smallest to largest (not the data in the nodes).* 
 
 `````````````
 public ArrayList<AVLTreeNode> inorder(AVLTreeNode node)
 `````````````
 ---
 
-**Description:** *Given a subtree rooted at node and a list, perform an inorder traversal. The list must contain AVLTreeNode objects in the order delivered by an inorder traversal. * 
+**Description:** *Given a subtree rooted at node and a list, perform an inorder traversal. The list must contain AVLTreeNode objects in the order delivered by an inorder traversal.* 
 
 `````````````
 public void inorderRec(AVLTreeNode node, ArrayList<AVLTreeNode> list)
@@ -96,7 +96,7 @@ public void inorderRec(AVLTreeNode node, ArrayList<AVLTreeNode> list)
 
 **`The public methods you must implement specifically for the AVL Tree.`**
 
-**Description:** *Recomputes the height of node, recall that this was provided in class. * 
+**Description:** *Recomputes the height of node, recall that this was provided in class.* 
 
 
 `````````````
