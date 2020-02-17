@@ -14,6 +14,10 @@ The traffic flow is simulated via a path-finding algorithm that performs a depth
 Traffic was simulated by using The official website of the City of London Traffic Volume webpage, the link can be accessed here: https://www.london.ca/residents/Roads-Transportation/traffic-management/Pages/Traffic-Volumes.aspx
 
 
+## Sample Output (map1.txt) 
+![map1](https://user-images.githubusercontent.com/16707828/74687466-7522fb00-51a2-11ea-9167-821287237189.gif)
+
+
 ## Classes 
 
 ### `Class AVLTree`
@@ -131,5 +135,35 @@ The DepthFirstSearch class will have the following instance variables:
 + (2) a Stack<Intersection> stack. 
   
 The stack will be used for storing the path that will be passed onto the class RouteFind when updating information on the traffic information, which will maintain the AVL Tree storing the number of times a vehicle enters each intersection.
+
+**`Public Methods Implemented`**
+
+**Description:** *Initialize the instance variables.*
+`````````````
+public DepthFirstSearch(RouteGraph graph)
+`````````````
+---
+**Description:** *Reset stack, then you will call pathRec(startVertex, endVertex, and returns the stack.*
+`````````````
+public Stack<Intersection> path(Intersection startVertex, Intersection endVertex) throws GraphException
+`````````````
+---
+**Description:** *Implemented an algorithm (called path) used for computing a path via a depth-first search. The algorithm will find shortest paths, nor paths using the least number of edges, we will assume the drivers in Mini-London might like to go for long drives. This recursive method when completed must have the path stored in stack.*
+`````````````
+public boolean pathRec(Intersection startVertex, Intersection endVertex)
+`````````````
+---
+
+## All Other Classes 
+
+### `Class AVLTreeADT.java`
+### `Class AVLTreeNode.java`
+### `Class ColourNode.java`
+### `Class GraphException.java`
+### `Class Intersection.java`
+### `Class Road.java`
+### `Class RouteFind.java`
+### `Class RouteGraph.java`
+### `Class TreeException.java`
 
 
