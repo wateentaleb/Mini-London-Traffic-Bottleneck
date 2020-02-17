@@ -98,8 +98,29 @@ public void inorderRec(AVLTreeNode node, ArrayList<AVLTreeNode> list)
 
 **Description:** *Recomputes the height of node, recall that this was provided in class.* 
 
-
 `````````````
 public void recomputeHeight(AVLTreeNode node)
 `````````````
 ---
+**Description:** *This method re-balances the tree and updates the heights of nodes as the method moves up to the root of the tree.* 
+
+`````````````
+public void rebalanceAVL(AVLTreeNode r, AVLTreeNode v)
+`````````````
+---
+
+**Description:** *Given the root of an AVL Tree node and a key-value pair key and data, insert this record into the AVL Tree, re-balance if necessary. It must call the rebalanceAVL method.* 
+
+`````````````
+public void putAVL(AVLTreeNode node, int key, int data) throws TreeException
+`````````````
+---
+
+**Description:** *Given the root of an AVL Tree node and a key, remove the record with key (use your remove method), rebalance whenever necessary. This method must call the rebalanceAVL method.* 
+
+`````````````
+public void removeAVL(AVLTreeNode node, int key) throws TreeException
+`````````````
+---
+
+
