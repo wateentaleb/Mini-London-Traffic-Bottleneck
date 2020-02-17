@@ -7,9 +7,91 @@ For simplicity, we will call this the **bottleneck intersection**. All the inter
 
 <img width="844" alt="map " src="https://user-images.githubusercontent.com/16707828/74684748-a8fa2280-519a-11ea-8a1b-d2f44c00e1f1.png">
 
-he traffic flow is simulated via a path-finding algorithm that performs a depth-first search in the graph. Upon finding a path, code provided to you will update the data storing the number of crossings at an intersection, this data is stored in nodes of an AVL Tree. You will implement:
+The traffic flow is simulated via a path-finding algorithm that performs a depth-first search in the graph. Upon finding a path, the program will update the data storing the number of crossings at an intersection, this data is stored in nodes of an AVL Tree. The following will be implemented:
 + an AVL Tree;
 + a path-finding algorithm (depth-first search).
 
 Traffic was simulated by using The official website of the City of London Traffic Volume webpage, the link can be accessed here: https://www.london.ca/residents/Roads-Transportation/traffic-management/Pages/Traffic-Volumes.aspx
+
+
+## Classes 
+
+### `Class AVLTree`
+
+This class implements an AVL Tree. 
+Each node of this tree is implemented as AVLTreeNode, in the class AVLTreeNode.java; each of these nodes has a key (a positive integer) and a data entry (a positive integer). 
+This class should have two instance variables: 
++ (1) an integer size that is the number of records in the tree (number of internal nodes, remember leaves do not records)
++ (2) an AVLTreeNode root, the root of the AVL Tree.
+
+**`Public Methods Implemented`**
+
+**Description:** *A constructor which returns a new **AVLTree** object, it sets **size** to zero
+and the **root** to a new leaf node (use one of the constructors for AVLTreeNode).*
+`````````````
+public AVLTree()
+`````````````
+---
+**Description:** *Given a **node**, sets it as the **root** of the AVL Tree.*
+`````````````
+public void setRoot(AVLTreeNode node)
+`````````````
+---
+
+**Description:** *Return the **root** of the AVL Tree.*
+`````````````
+public AVLTreeNode root()
+`````````````
+---
+**Description:** *Given a **node**, is the node the root of the AVL Tree? Return **true** if node is the root, and return **false** otherwise.*
+`````````````
+public boolean isRoot(AVLTreeNode node)
+`````````````
+---
+**Description:** *Return the number of elements stored in the tree.*
+`````````````
+public int getSize()
+`````````````
+---
+
+**Description:** *Given the root of a binary search tree **node** and a **key**, return the node containing key as its key; otherwise return the leaf node where k should have been in the AVL Tree.*
+`````````````
+public AVLTreeNode get(AVLTreeNode node, int key)
+`````````````
+---
+
+**Description:** *Given the root of a binary search tree node, return the node containing the smallest key; return null if the AVLTree has no data stored in it.*
+`````````````
+public AVLTreeNode smallest(AVLTreeNode node)
+`````````````
+---
+
+**Description:** *Put method for a binary search tree (will be used by another method for properly inserting data into an AVL Tree). Given the root of a binary search tree node and a key-value pair key and data, return the node storing the the new node containing record (key, data); this method must throw the TreeException if a record with a duplicate key is attempted to be inserted into the tree. * **
+
+`````````````
+public AVLTreeNode put(AVLTreeNode node, int key, int data) throws TreeException
+`````````````
+---
+
+**Description:** *Remove method for a binary search tree. Given the root of a binary search tree node and a key, remove the record with key from the tree. The method must return the node where the removed node used to be. If there is no node storing a record with key, throw the TreeException. * **
+
+`````````````
+public AVLTreeNode remove(AVLTreeNode node, int key) throws TreeException
+`````````````
+---
+
+**Description:** *Return an ArrayList(using Java’s ArrayList class) with AVLTreeNode objects from an inorder traversal. Use the next method to perform the inorder traversal; the nodes in the list have keys of value from smallest to largest (not the data in the nodes). * **
+
+`````````````
+public ArrayList<AVLTreeNode> inorder(AVLTreeNode node)
+`````````````
+---
+
+**Description:** *Given a subtree rooted at node and a list, perform an inorder traversal. The list must contain AVLTreeNode objects in the order delivered by an inorder traversal. * **
+
+`````````````
+public void inorderRec(AVLTreeNode node, ArrayList<AVLTreeNode> list)
+`````````````
+---
+
 
