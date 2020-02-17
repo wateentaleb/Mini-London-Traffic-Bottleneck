@@ -94,7 +94,7 @@ public void inorderRec(AVLTreeNode node, ArrayList<AVLTreeNode> list)
 `````````````
 ---
 
-**`The public methods you must implement specifically for the AVL Tree.`**
+**`The public methods implemented specifically for the AVL Tree.`**
 
 **Description:** *Recomputes the height of node, recall that this was provided in class.* 
 
@@ -122,5 +122,14 @@ public void putAVL(AVLTreeNode node, int key, int data) throws TreeException
 public void removeAVL(AVLTreeNode node, int key) throws TreeException
 `````````````
 ---
+
+### `Class DepthFirstSearch`
+
+This class implements a depth-first search algorithm that finds a path given a starting vertex and end vertex. 
+The DepthFirstSearch class will have the following instance variables: 
++ (1) a RouteGraph inputGraph 
++ (2) a Stack<Intersection> stack. 
+  
+The stack will be used for storing the path that will be passed onto the class RouteFind when updating information on the traffic information, which will maintain the AVL Tree storing the number of times a vehicle enters each intersection.
 
 
